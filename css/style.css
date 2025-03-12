@@ -1,6 +1,6 @@
 /* Variables */
 :root {
-  --containerW: 1100px;
+  --containerW: 900px;
 }
 
 /* Reset */
@@ -8,6 +8,11 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
 }
 
 img {
@@ -20,6 +25,11 @@ ul {
 
 ul li {
   display: inline-block;
+}
+
+body {
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 /* # UTILS */
@@ -40,6 +50,10 @@ ul li {
 
   /* DEBUG */
   border: 2px dashed #000;
+}
+
+.container.small {
+  max-width: 800px;
 }
 
 .row {
@@ -80,12 +94,23 @@ ul li {
   width: calc(100% / 6);
 }
 
+.col-1-8 {
+  width: calc(100% / 8);
+}
+
 .col-3-4 {
   width: calc(100% / 4 * 3);
 }
 
 .btn {
   background-color: #0161fe;
+  color: white;
+  padding: 3px 10px;
+}
+
+.btn.big {
+  padding: 10px 5px;
+  font-size: 0.7rem;
 }
 
 /* HEADER */
@@ -94,17 +119,94 @@ ul li {
   border: 2px dashed #000;
   display: flex;
   justify-content: space-between;
+  padding: 15px 10px;
 }
 
-[class*="header"] {
+div[class*="header"] {
   display: flex;
   align-items: center;
 }
 
+.header-left {
+  gap: 20px;
+}
+
+.page-header ul li {
+  min-width: 100px;
+  text-align: center;
+  font-size: 0.8rem;
+}
+
 /* MAIN */
 
+/* HERO Section */
+
 .hero {
-  border: 2px dashed #000;
+  /* border: 2px dashed #000; */
+  background-color: #b4d0e6;
+}
+
+.hero .container {
+  position: relative;
+  bottom: -60px;
+}
+
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 40px;
+  font-weight: bold;
+}
+
+.hero p {
+  font-size: 0.8rem;
+  margin-bottom: 20px;
+}
+
+.hero span.calcel {
+  font-size: 0.8rem;
+  margin-bottom: 60px;
+}
+
+.hero span.down-arrow {
+  font-size: 3rem;
+}
+
+.hero .btn.big {
+  margin-bottom: 20px;
+}
+
+/* BUSINESS PLAN */
+
+.business-plan .container {
+  padding-top: 100px;
+}
+
+.container h2 {
+  margin-bottom: 30px;
+}
+
+.container .option {
+  display: flex;
+  gap: 20px;
+}
+
+.container .first-option,
+.container .last-option {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.business-plan .radio {
+  border: 1px solid black;
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  line-height: 1rem;
+}
+
+.business-plan .radio.selected {
+  border: 4px solid #0161fe;
 }
 
 .col-1-4 span {
