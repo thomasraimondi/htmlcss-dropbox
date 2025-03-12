@@ -1,6 +1,7 @@
 /* Variables */
 :root {
   --containerW: 900px;
+  --collumngap: 20px;
 }
 
 /* Reset */
@@ -57,6 +58,8 @@ body {
   display: flex;
   flex-wrap: wrap;
   row-gap: 2rem;
+  column-gap: var(--collumngap);
+  justify-content: space-around;
 
   margin-left: -1rem;
   margin-right: -1rem;
@@ -76,15 +79,15 @@ body {
 }
 
 .col-1-3 {
-  width: calc(100% / 3);
+  width: calc(100% / 3 - var(--collumngap));
 }
 
 .col-1-4 {
-  width: calc(100% / 4);
+  width: calc(100% / 4 - var(--collumngap));
 }
 
 .col-1-5 {
-  width: calc(100% / 5);
+  width: calc(100% / 5 - var(--collumngap));
 }
 
 .col-1-6 {
@@ -106,7 +109,8 @@ body {
 .btn {
   background-color: #0161fe;
   color: white;
-  padding: 3px 10px;
+  padding: 5px 10px;
+  border: none;
 }
 
 .btn.big {
@@ -179,6 +183,7 @@ div[class*="header"] {
 .hero span.calcel {
   font-size: 0.8rem;
   margin-bottom: 50px;
+  display: block;
 }
 
 .hero span.down-arrow {
@@ -193,7 +198,6 @@ div[class*="header"] {
 .business-plan .container ul li,
 .business-plan .container span {
   display: block;
-  list-style: circle;
 }
 
 .container .option {
@@ -227,6 +231,7 @@ div[class*="header"] {
 
 .card-plan {
   border: 1px solid lightgray;
+  min-height: 100%;
 }
 
 .card-plan .card-content {
@@ -235,25 +240,73 @@ div[class*="header"] {
 
 .card-plan .header-card {
   border-bottom: 1px solid lightgray;
+  padding: 5px 0;
+  font-size: 0.8rem;
 }
 
 .card-plan .work-group {
   text-align: center;
 }
 
+.card-content .title {
+  font-size: 1.3rem;
+}
+
 .card-content .price {
   font-size: 0.6rem;
   font-weight: bolder;
+  display: block;
 }
 
 .card-content .billing-method {
   font-size: 0.6rem;
   color: lightgray;
+  display: block;
+}
+
+.business-plan .container .card-content .plan-details {
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  min-height: 100px;
+}
+
+.business-plan .container .card-content ul li {
+  display: flex;
+  gap: 5px;
+  font-size: 0.6rem;
+  padding: 5px 0;
+}
+
+.card-content .btn {
+  width: 100%;
+}
+
+.buy-now span {
+  font-size: 0.7rem;
+}
+
+.buy-now a {
+  text-decoration: underline;
+  color: blue;
+}
+
+.feature-details i {
+  color: #0362ff;
+  font-weight: bold;
 }
 
 .card-content .border {
   border-top: 1px solid lightgray;
   width: 30%;
+}
+
+.sales .price {
+  font-size: 0.8rem;
+}
+
+.sales p {
+  font-size: 0.7rem;
 }
 
 /* FIND PARTNER */
@@ -266,6 +319,10 @@ div[class*="header"] {
 .find-partner .col-1-3 {
   padding: 50px 30px;
   align-items: center;
+}
+
+.find-partner p {
+  font-size: 0.8rem;
 }
 
 .find-partner .btn {
@@ -286,7 +343,11 @@ div[class*="header"] {
   font-size: 0.8rem;
 }
 
-/* Info */
+/* MORE INFO */
+.more-info .row {
+  justify-content: flex-start;
+}
+
 .more-info .container {
   padding-bottom: 50px;
 }
@@ -300,6 +361,9 @@ div[class*="header"] {
 }
 
 /* FOOTER */
+footer .row {
+  justify-content: flex-start;
+}
 
 footer {
   background-color: black;
@@ -321,8 +385,4 @@ footer .container .border {
 
 .container .languages {
   color: lightgray;
-}
-
-.col-1-4 span {
-  display: block;
 }
