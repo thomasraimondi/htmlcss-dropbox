@@ -387,21 +387,45 @@ div[class*="header"] {
 }
 
 /* PARTNERS */
+
 #partners .col-1-2 {
   padding: 0;
 }
 
 #partners .row {
   row-gap: 0;
-  height: 100%;
 }
 
 #partners .col-1-2 {
   aspect-ratio: 1;
 }
+
+#partners .col-1-2 img {
+  filter: invert(100%);
+}
+
+#partners .col-1-2 .card-logo-margin {
+  background-color: #a2d39b;
+  aspect-ratio: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
+  padding: 10px;
+}
+
 #partners .col-1-3 {
   aspect-ratio: 1;
   overflow: auto;
+}
+
+#partners .card-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
 }
 /* MAIN PARTENERS */
 
@@ -423,9 +447,13 @@ div[class*="header"] {
   font-size: 0.8rem;
 }
 
-/* SEZIONE CSS SVILUPPATA SOLO PERCHE' NON AVEVO A DISPOSIZIONE LE IMMAGINI */
+#partners .main-partners img {
+  width: 50%;
+}
+
+/* BACKGROUND PARTNERS*/
 #partners .col-1-3:first-child .col-1-2:nth-child(1) {
-  background-color: #a2d39b;
+  background-color: #d2e9cd;
 }
 #partners .col-1-3:first-child .col-1-2:nth-child(2) {
   background-color: #0093ce;
@@ -465,6 +493,7 @@ div[class*="header"] {
 #trial h2 {
   display: inline-block;
   font-size: 2rem;
+  color: #62092b;
 }
 
 #trial .btn {
