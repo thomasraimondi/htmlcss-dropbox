@@ -1,7 +1,6 @@
 /* Variables */
 :root {
   --containerW: 900px;
-  --collumngap: 20px;
 }
 
 /* Reset */
@@ -172,54 +171,50 @@ div[class*="header"] {
 
 /* MAIN */
 
-/* HERO Section */
+/* HERO SECTION */
 
-.hero {
+#hero {
   background-color: #b4d0e6;
 }
 
-.hero .container {
+#hero .container {
   position: relative;
-  bottom: -60px;
+  top: 50px;
 }
 
-.hero .col-1-4 {
+#hero .col-1-4 {
   display: flex;
   flex-direction: column;
 }
 
-.hero h1 {
+#hero h1 {
   font-size: 3.5rem;
   font-weight: bold;
   max-width: 90%;
 }
 
-.hero p {
+#hero p {
   font-size: 0.8rem;
 }
 
-.hero span.calcel {
+#hero span.calcel {
   font-size: 0.8rem;
-  margin-bottom: 50px;
-  display: block;
 }
 
-.hero span.down-arrow {
+#hero span.down-arrow {
   font-size: 2.5rem;
-  font-weight: bold;
   margin-top: auto;
-  margin-bottom: 60px;
 }
 
 /*************************** BUSINESS PLAN *************************/
 
 /* BILLING METHOD */
 
-.business-plan .container {
+#business-plan .container {
   padding-top: 100px;
 }
-.business-plan .container ul li,
-.business-plan .container span {
+#business-plan .container ul li,
+#business-plan .container span {
   display: block;
 }
 
@@ -235,7 +230,7 @@ div[class*="header"] {
   align-items: center;
 }
 
-.business-plan .radio {
+#business-plan .radio {
   border: 1px solid black;
   border-radius: 50%;
   width: 1rem;
@@ -243,123 +238,122 @@ div[class*="header"] {
   line-height: 1rem;
 }
 
-.business-plan .radio.selected {
+#business-plan .radio.selected {
   border: 4px solid #0161fe;
 }
 
 /* CARD BUSINESS PLAN */
 
-.card-plan {
+#business-plan .card-plan {
   border: 1px solid lightgray;
   min-height: 100%;
   position: relative;
   background-color: white;
 }
 
-.card-plan:hover {
+#business-plan .card-plan:hover {
   transform: scale(1.07);
   transition: 1s;
   box-shadow: 0px 2px 7px 3px #c4c3c3;
 }
 
-.card-plan .card-content {
+#business-plan .card-plan .card-content {
   padding: 20px 20px;
 }
 
-.card-plan .header-card {
+#business-plan .card-plan .header-card {
   border-bottom: 1px solid lightgray;
   padding: 5px 0;
   font-size: 0.8rem;
 }
 
-.card-plan .work-group {
+#business-plan .card-plan .work-group {
   text-align: center;
 }
 
-.card-content .title {
+#business-plan .card-content .title {
   font-size: 1.3rem;
 }
 
-.card-content .price {
+#business-plan .card-content .price {
   font-size: 0.6rem;
   font-weight: bolder;
   display: block;
 }
 
-.card-content .billing-method {
+#business-plan .card-content .billing-method {
   font-size: 0.6rem;
   color: lightgray;
   display: block;
 }
 
-.business-plan .plan-details {
-  min-height: 110px;
+#business-plan .plan-details {
+  min-height: 7.5rem;
 }
 
-.business-plan .card-content ul li {
+#business-plan .card-content ul li {
   display: flex;
   gap: 5px;
   font-size: 0.6rem;
-  padding: 5px 0;
-  min-height: 2rem;
+  padding: 0.5rem 0;
 }
 
-.card-content .btn {
+#business-plan .card-content .btn {
   width: 100%;
 }
 
-.buy-now span {
+#business-plan .buy-now span {
   font-size: 0.7rem;
 }
 
-.buy-now a {
+#business-plan .buy-now a {
   text-decoration: underline;
   color: blue;
 }
 
-.feature-details i {
+#business-plan .feature-details i {
   color: #0362ff;
   font-weight: bold;
 }
 
-.card-content .border {
+#business-plan .card-plan .border {
   border-top: 1px solid lightgray;
   width: 30%;
 }
 
-.sales .price {
+#business-plan .card-sales .price {
   font-size: 0.8rem;
 }
 
-.sales p {
+#business-plan .card-sales p {
   font-size: 0.7rem;
 }
 
 /* FIND PARTNER */
 
-.find-partner .container {
+#find-partner .container {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.find-partner .col-1-3 {
+#find-partner .col-1-3 {
   padding: 50px 30px;
   align-items: center;
 }
 
-.find-partner p {
+#find-partner p {
   font-size: 0.8rem;
 }
 
-.find-partner .btn {
+#find-partner .btn {
   border: 1px solid gray;
   padding: 10px 10px;
   background-color: white;
   color: #000;
 }
 
-.find-partner .btn:hover,
-.find-partner .btn:focus {
+#find-partner .btn:hover,
+#find-partner .btn:focus {
   background-color: #0161fe;
   color: white;
   border: 1px solid transparent;
@@ -367,39 +361,29 @@ div[class*="header"] {
 
 /* FEATURES */
 
-.features .container {
+#features .container {
   padding-top: 50px;
   padding-bottom: 50px;
 }
 
-.features p {
+#features p {
   font-size: 0.8rem;
 }
 
 /* MORE INFO */
 
-.more-info .row {
-  justify-content: flex-start;
-}
-
-.more-info .container {
+#more-info .clients {
+  padding-top: 50px;
   padding-bottom: 50px;
 }
-.more-info .container .row {
-  padding-top: 50px;
-}
 
-.more-info .container a {
+#more-info a {
   text-decoration: underline;
   color: #0161fe;
   font-size: 0.8rem;
 }
 
 /* FOOTER */
-
-footer .row {
-  justify-content: flex-start;
-}
 
 footer {
   background-color: black;
