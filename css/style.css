@@ -184,8 +184,9 @@ div[class*="header"] {
 }
 
 .hero h1 {
-  font-size: 4rem;
+  font-size: 3.5rem;
   font-weight: bold;
+  max-width: 90%;
 }
 
 .hero p {
@@ -383,6 +384,7 @@ div[class*="header"] {
 .more-info .container a {
   text-decoration: underline;
   color: #0161fe;
+  font-size: 0.8rem;
 }
 
 /* FOOTER */
