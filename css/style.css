@@ -373,11 +373,22 @@ div[class*="header"] {
   font-size: 0.8rem;
 }
 
+#features .card-features {
+  border: 1px solid lightgray;
+  padding: 10px;
+}
+
+#features .card-features:hover {
+  transform: scale(1.07);
+  transition: 1s;
+  box-shadow: 0px 2px 7px 3px #c4c3c3;
+}
+
 /* MORE INFO */
 
-#more-info .clients {
+#more-info .container .clients {
+  padding-bottom: 100px;
   padding-top: 50px;
-  padding-bottom: 50px;
 }
 
 #more-info a {
