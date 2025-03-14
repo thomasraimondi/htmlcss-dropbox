@@ -1,6 +1,8 @@
 /* Variables */
 :root {
   --containerW: 900px;
+  --primary-color: #0161fe;
+  --borderColor: #767676;
 }
 
 /* Reset */
@@ -30,6 +32,10 @@ ul li {
 body {
   font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
     "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+input[type="radio"] {
+  display: none;
 }
 
 /* # UTILS */
@@ -108,10 +114,12 @@ body {
 }
 
 .btn {
-  background-color: #0161fe;
+  background-color: var(--primary-color);
   color: white;
   padding: 5px 10px;
   border: 1px solid transparent;
+  display: inline-block;
+  text-align: center;
 }
 
 .btn.big {
@@ -122,7 +130,7 @@ body {
 .btn:hover {
   background-color: #fff;
   color: #333;
-  border: 1px solid gray;
+  border: 1px solid var(--borderColor);
 }
 
 .mb-10 {
@@ -139,6 +147,23 @@ body {
 }
 .mb-50 {
   margin-bottom: 50px;
+}
+
+.container-option {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.fake-radio {
+  border: 1px solid var(--borderColor);
+  border-radius: 50%;
+  width: 13px;
+  height: 13px;
+}
+
+input[type="radio"]:checked + .fake-radio {
+  border: 3px solid var(--primary-color);
 }
 
 /* HEADER */
@@ -227,29 +252,10 @@ div[class*="header"] {
   gap: 20px;
 }
 
-.container .first-option,
-.container .last-option {
-  display: flex;
-  gap: 10px;
-  align-items: center;
-}
-
-#business-plan .radio {
-  border: 1px solid black;
-  border-radius: 50%;
-  width: 1rem;
-  height: 1rem;
-  line-height: 1rem;
-}
-
-#business-plan .radio.selected {
-  border: 4px solid #0161fe;
-}
-
 /* CARD BUSINESS PLAN */
 
 #business-plan .card-plan {
-  border: 1px solid lightgray;
+  border: 1px solid var(--borderColor);
   min-height: 100%;
   position: relative;
   background-color: white;
@@ -266,7 +272,7 @@ div[class*="header"] {
 }
 
 #business-plan .card-plan .header-card {
-  border-bottom: 1px solid lightgray;
+  border-bottom: 1px solid var(--borderColor);
   padding: 5px 0;
   font-size: 0.8rem;
 }
@@ -306,22 +312,26 @@ div[class*="header"] {
   width: 100%;
 }
 
+#business-plan .card-content .btn: {
+  width: 100%;
+}
+
 #business-plan .buy-now span {
   font-size: 0.7rem;
 }
 
 #business-plan .buy-now a {
   text-decoration: underline;
-  color: blue;
+  color: var(--primary-color);
 }
 
 #business-plan .feature-details i {
-  color: #0362ff;
+  color: var(--primary-color);
   font-weight: bold;
 }
 
 #business-plan .card-plan .border {
-  border-top: 1px solid lightgray;
+  border-top: 1px solid var(--borderColor);
   width: 30%;
 }
 
@@ -350,14 +360,14 @@ div[class*="header"] {
 }
 
 #find-partner .btn {
-  border: 1px solid gray;
+  border: 1px solid var(--borderColor);
   padding: 10px 10px;
   background-color: white;
   color: #000;
 }
 
 #find-partner .btn:hover {
-  background-color: #0161fe;
+  background-color: var(--primary-color);
   color: white;
   border: 1px solid transparent;
 }
@@ -374,7 +384,7 @@ div[class*="header"] {
 }
 
 #features .card-features {
-  border: 1px solid lightgray;
+  border: 1px solid var(--borderColor);
   padding: 10px;
 }
 
@@ -393,7 +403,7 @@ div[class*="header"] {
 
 #more-info a {
   text-decoration: underline;
-  color: #0161fe;
+  color: var(--primary-color);
   font-size: 0.8rem;
 }
 
@@ -449,7 +459,7 @@ div[class*="header"] {
 }
 
 #partners .main-partners .border {
-  border-top: 1px solid gray;
+  border-top: 1px solid var(--borderColor);
   width: 30%;
 }
 
@@ -507,14 +517,14 @@ div[class*="header"] {
 }
 
 #trial .btn {
-  border: 1px solid gray;
+  border: 1px solid var(--borderColor);
   padding: 10px 50px;
   background-color: white;
   color: #000;
 }
 
 #trial .btn:hover {
-  background-color: #0161fe;
+  background-color: var(--primary-color);
   color: white;
   border: 1px solid transparent;
 }
@@ -536,7 +546,7 @@ footer ul li {
 }
 
 footer .container .border {
-  border-top: 1px solid lightgray;
+  border-top: 1px solid var(--borderColor);
 }
 
 .container .languages {
